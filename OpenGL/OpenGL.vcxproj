@@ -144,7 +144,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="imgui.ini" />
-    <None Include="src\shaders\basic.shader" />
+    <None Include="src\shaders\Basic.shader" />
+    <None Include="src\shaders\Texture2D.shader" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\engine\IndexBuffer.cpp" />
@@ -161,10 +162,13 @@
     <ClCompile Include="src\imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\stb\stb_image.cpp" />
     <ClCompile Include="src\test\Test.cpp" />
     <ClCompile Include="src\test\TestMenu.cpp" />
     <ClCompile Include="src\test\TestRectangle.cpp" />
     <ClCompile Include="src\test\TestTriangle.cpp" />
+    <ClCompile Include="src\test\TestTexture.cpp" />
+    <ClCompile Include="src\engine\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\IndexBuffer.h" />
@@ -182,10 +186,16 @@
     <ClInclude Include="src\imgui\imstb_rectpack.h" />
     <ClInclude Include="src\imgui\imstb_textedit.h" />
     <ClInclude Include="src\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\stb\stb_image.h" />
     <ClInclude Include="src\test\Test.h" />
     <ClInclude Include="src\test\TestMenu.h" />
     <ClInclude Include="src\test\TestRectangle.h" />
     <ClInclude Include="src\test\TestTriangle.h" />
+    <ClInclude Include="src\test\TestTexture.h" />
+    <ClInclude Include="src\engine\Texture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\img\mclaren.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

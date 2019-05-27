@@ -15,7 +15,7 @@ static unsigned int indices[]{
 };
 
 TestRectangle::TestRectangle()
-	: shader("src/shaders/basic.shader"),
+	: shader("src/shaders/Basic.shader"),
 	ibo(indices, 6),
 	vbo(positions, 8 * sizeof(float))
 {

@@ -10,6 +10,7 @@
 #include "test/TestMenu.h"
 #include "test/TestRectangle.h"
 #include "test/TestTriangle.h"
+#include "test/TestTexture.h"
 
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_glfw.h"
@@ -44,6 +45,7 @@ int main() {
 		TestMenu* testMenu = new TestMenu(currentTest);
 		testMenu->RegisterTest<TestTriangle>("Triangle Test");
 		testMenu->RegisterTest<TestRectangle>("Rectangle Test");
+		testMenu->RegisterTest<TestTexture>("Texture Test");
 		currentTest = testMenu;
 
 		while (!glfwWindowShouldClose(window))
@@ -77,9 +79,12 @@ int main() {
 			glfwPollEvents();
 		}
 
-		delete currentTest;
 		if (testMenu != currentTest) {
+			delete currentTest;
 			delete testMenu;
+		}
+		else {
+			delete currentTest;
 		}
 	}
 

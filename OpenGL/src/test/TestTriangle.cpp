@@ -14,7 +14,7 @@ static unsigned int indices[]{
 };
 
 TestTriangle::TestTriangle()
-	: shader("src/shaders/basic.shader"),
+	: shader("src/shaders/Basic.shader"),
 	ibo(indices, 3),
 	vbo(positions, 6 * sizeof(float))
 {
